@@ -1,0 +1,112 @@
+{
+    "CLIENT": "KUMARI",
+    "LOGGING_LEVEL": "DEBUG",
+    "ENABLE_SCREEN_LOG": "yes",
+  
+    "DB_CONNECTION": {
+      "MYSQL": {
+        "drivername": "mysql+mysqldb",
+        "username": "root",
+        "password": "root",
+        "host": "localhost",
+        "port": "3306"
+      },
+  
+      "ORACLE": {
+        "drivername": "oracle+cx_oracle",
+        "host": "localhost",
+        "username": "DELCHNL",
+        "password": "DelChnlkbl",
+        "port": "1520",
+        "sid_name": "orcl"
+      }
+    },
+  
+    "DC_INDICATOR": {
+      "deposit": "deposit",
+      "withdraw": "withdraw"
+    },
+  
+    "BAD_LOAN_STATUS_CODE": ["DEFAULT"],
+  
+    "MAINTAIN_SCORE_ARCHIVE": "no",
+  
+    "MASTER_COLUMNS": [
+      "customer_code",
+      "account_number",
+      "org_id",
+      "branch",
+      "product"
+    ],
+  
+    "MERGE_COLS": ["account_number"],
+  
+    "ADDITIONAL_FACTS": [
+      "avg_monthly_salary"
+    ],
+  
+    "FILEDS_MAPPING": {
+      "account_number": "account_number",
+      "customer_code": "bank_customer_id",
+      "branch": "branch_code",
+      "org_id": "org_id",
+      "credit_limit4": "average_salary",
+      "confidence_percentage": "confidence_percentage"
+    },
+  
+    "RW": {
+      "db": "fc",
+      "account_master": "fc_account_master",
+      "transaction": "fc_transaction_base",
+      "daily_summary": "fc_balance_summary",
+      "bank_loan": "fc_loan_facts",
+      "fonepay_loan": "loan_request",
+      "updated_accounts": "fc_updated_accounts"
+  
+    },
+  
+    "CREDIT_SCORE": {
+      "db": "fc",
+  
+      "etl_table_config": "fc_config_tables",
+      "filter_config": "fc_config_filters",
+      "etl_config": "fc_config_etl",
+      "fact_config": "fc_config_fact",
+      "score_config": "fc_config",
+      "fc_batch_info": "fc_batch_info",
+      "weights": "fc_config_weights",
+      "custom_bins": "fc_config_custom_bins",
+      "outlier_config_table": "fc_config_outliers",
+      "credit_limit_config": "fc_config_credit_limit",
+      "slabs_config": "fc_config_slabs",
+      "customer_segment_config": "fc_config_customer_segment",
+  
+      "filtered_accounts_incremental": "fc_filtered_accounts_incremental",
+      "filtered_accounts": "fc_filtered_accounts",
+      "salary_flag": "fc_salary_flag",
+      "metrics_facts": "fc_credit_score_fact_metrics",
+      "fact": "fc_credit_score_fact",
+  
+      "credit_limits": "fc_credit_limits",
+      "score_table": "fc_credit_score",
+      "score_archive_table": "fc_credit_score_archive",
+      "score_intermediate_table": "fc_credit_score_intermediate",
+      "outlier_info": "fc_outlier_info",
+      "neediness_score": "fc_neediness_score",
+      "worthiness_score": "fc_worthiness_score",
+  
+      "outlier_monitor": "fc_monitor_outliers",
+      "distributions_monitor": "fc_monitor_distributions",
+      "customer_segments_monitor": "fc_monitor_customer_segments",
+      "bins_monitor": "fc_monitor_bins",
+      "score_monitor": "fc_monitor_scores",
+      "customer_counts_monitor": "fc_monitor_customer_counts",
+      "usecases_monitor": "fc_monitor_usecases",
+      "distributions_monitor_last3month": "fc_monitor_distributions_last_3months",
+      "salary_monitor": "fc_monitor_salary",
+  
+      "customer_segment": "fc_customer_segment",
+      "customer_segment_filtered": "fc_customer_segment_filtered"
+    }
+  }
+  

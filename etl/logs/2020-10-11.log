@@ -1,0 +1,7 @@
+2020-10-11:11:01:03,517 INFO     [load_data.py:24] Loading account master data
+2020-10-11:11:01:03,517 INFO     [load_data.py:49] select ACCOUNT_NUMBER,
+            CUSTOMER_CODE,BRANCH,PRODUCT,PRODUCT_CATEGORY,ACC_OPEN_DATE,'SYSTEM' AS CREATED_BY,
+            case when ACTIVE_FLAG='ACTIVE' THEN 1 ELSE 0 END AS ACTIVE_FLAG,ACC_CLOSED_DATE FROM VW_DEPOSIT_ACCOUNT_MASTER
+            where acc_open_date between to_date('13-06-2020','dd-mm-yyyy')
+            and to_date('13-06-2020','dd-mm-yyyy')
+            
